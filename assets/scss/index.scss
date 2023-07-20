@@ -1,0 +1,18 @@
+// Global Style
+@import "./base";
+
+// Mixins Style
+@import "./mixins";
+
+// Variables
+@import "./variables";
+
+// Components Style
+@import "./components/header";
+@import "./components/footer";
+
+// Pages Style
+@import "./page/about";
+@import "./page/contact";
+@import "./page/home";
+@import "./page/rooms";
