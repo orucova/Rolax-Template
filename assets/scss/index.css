@@ -126,7 +126,7 @@ header .headerBottom .row .navBar .navList .navItem a::after {
   left: -5px;
   height: 3px;
   z-index: 1;
-  background-color: blue;
+  background-color: #fff;
   transition: all 0.4s ease-out 0s;
 }
 header .headerBottom .row .navBar .navList .navItem .dropDownList {
@@ -155,10 +155,296 @@ header .headerBottom .row i {
   header .headerTop {
     display: none;
   }
+  header .headerBottom {
+    padding: 20px 0;
+  }
   header .headerBottom .row .navBar {
     display: none;
   }
   header .headerBottom .row i {
     display: block;
   }
+}
+main .services {
+  width: 100%;
+  padding: 120px 0;
+}
+main .services .container .row .servicesLeft {
+  padding: 0 12px;
+}
+main .services .container .row .servicesLeft img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  transform: translateY(5%);
+}
+main .services .container .row .servicesMiddle {
+  padding: 0 12px;
+  transform: translateY(13%);
+}
+main .services .container .row .servicesMiddle .servicesTitle {
+  font-family: "Libre Baskerville", serif;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 12px;
+  display: block;
+  color: #191514;
+}
+main .services .container .row .servicesMiddle .servicesInfo {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #656565;
+  margin-bottom: 30px;
+}
+main .services .container .row .servicesMiddle a {
+  color: #e29c89;
+  border: 1px solid #e29c89;
+  display: inline-block;
+  padding: 12px 44px;
+  text-transform: capitalize;
+  background: none;
+  transition: 0.3s ease all;
+}
+main .services .container .row .servicesMiddle a:hover {
+  background-color: #e29c89;
+  color: #fff;
+}
+main .services .container .row .servicesRight {
+  padding: 0 12px;
+}
+main .services .container .row .servicesRight img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 1400px) {
+  main .services .container .row .servicesMiddle .servicesTitle {
+    font-size: 40px;
+  }
+}
+main .rooms {
+  background: #f9f8f8;
+  padding: 110px 0 0 0;
+}
+main .rooms .container .row {
+  justify-content: space-between;
+}
+main .rooms .container .row .sectionTitle {
+  width: 33%;
+  padding: 0 12px;
+  margin-bottom: 30px;
+}
+main .rooms .container .row .sectionTitle h2 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+main .rooms .container .row .sectionTitle .sectionInfo {
+  color: #656565;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+main .rooms .container .row .sectionBtn {
+  display: flex;
+  align-items: center;
+}
+main .rooms .container .row .sectionBtn a {
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.168627451);
+  border-radius: 50px;
+  transition: 0.3s ease all;
+  margin-right: 13px;
+}
+main .rooms .container .row .sectionBtn a i {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.699);
+  padding: 15px 27px;
+}
+main .rooms .container .row .sectionBtn a:hover {
+  border-color: black;
+}
+main .rooms .container .roomCardsBox {
+  width: 100%;
+}
+main .rooms .container .roomCardsBox .row {
+  gap: 20px;
+}
+main .rooms .container .roomCardsBox .row .card {
+  width: 33%;
+  position: relative;
+}
+main .rooms .container .roomCardsBox .row .card img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .rooms .container .roomCardsBox .row .card .cardInfo {
+  position: absolute;
+  top: 60%;
+  left: 4%;
+  color: #fff;
+  font-weight: 300;
+}
+main .rooms .container .roomCardsBox .row .card .cardInfo a {
+  font-family: "Libre Baskerville", serif;
+  color: #fff;
+  font-size: 32px;
+  transition: 0.3s ease all;
+}
+main .rooms .container .roomCardsBox .row .card .cardInfo a:hover {
+  color: #e29c89;
+}
+main .rooms .container .roomCardsBox .row .card .cardInfo p {
+  margin-bottom: 10px;
+  color: #fff;
+  font-weight: 300;
+}
+main .rooms .container .roomCardsBox .row .card .cardInfo span .price {
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+  margin-left: 12px;
+}
+
+.hotel {
+  width: 100%;
+  padding: 120px 0;
+  position: relative;
+}
+.hotel::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 65%;
+  top: 0;
+  left: 0px;
+  z-index: -1;
+  background: #F9F8F8;
+}
+.hotel .container .sectionTitle {
+  margin: 0 200px;
+  text-align: center;
+}
+.hotel .container .sectionTitle h2 {
+  font-size: 42px;
+  display: block;
+  font-weight: 300;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+.hotel .container .sectionTitle .link a {
+  transition: all 0.3s ease-out 0s;
+  color: #191514;
+  font-size: 18px;
+  -webkit-text-decoration: dotted underline;
+          text-decoration: dotted underline;
+  letter-spacing: 0.5px;
+}
+.hotel .container .sectionTitle .link:hover {
+  transform: scale(1.01);
+}
+.hotel .container .sectionTitle .link:hover a {
+  letter-spacing: 0.6px;
+}
+.hotel .container .row {
+  padding: 60px 100px 0;
+}
+.hotel .container .row .hotelImg {
+  width: 50%;
+}
+.hotel .container .row .hotelImg img {
+  width: 100%;
+  height: 520px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.hotel .container .row .hotelInfo {
+  width: 50%;
+  padding: 60px 31px;
+  background: #191514;
+  height: 520px;
+  text-align: center;
+}
+.hotel .container .row .hotelInfo .hotelTitle .titleContent {
+  font-family: "Libre Baskerville", serif;
+  color: white;
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+.hotel .container .row .hotelInfo .hotelsInfo {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #fff;
+  margin: 40px 0;
+}
+.hotel .container .row .hotelInfo .hotelBtn {
+  color: #e29c89;
+  border: 1px solid #e29c89;
+  display: inline-block;
+  padding: 12px 44px;
+  text-transform: capitalize;
+  background: none;
+  transition: 0.3s ease all;
+}
+.hotel .container .row .hotelInfo .hotelBtn:hover {
+  background-color: #e29c89;
+  color: #fff;
+}
+
+.video {
+  width: 100%;
+}
+.video .videoContent {
+  width: 100%;
+  padding: 0 50px;
+  position: relative;
+}
+.video .videoContent .videoImg {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.video .iconBorder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  right: 50%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.video .iconBorder:after {
+  position: absolute;
+  border: 100px solid rgba(25, 21, 20, 0.2);
+  content: "";
+  border-radius: 50%;
+  left: -42px;
+  top: -42px;
+  right: 0;
+  z-index: 0;
+  background: rgba(0, 0, 0, 0);
+}
+.video .iconBorder .borderInIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.video .iconBorder .borderInIcon .fa-play {
+  color: #656565;
+  font-size: 40px;
 }/*# sourceMappingURL=index.css.map */
