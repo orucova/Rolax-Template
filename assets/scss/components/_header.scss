@@ -81,7 +81,7 @@ header {
                 left: -5px;
                 height: 3px;
                 z-index: 1;
-                background-color: blue;
+                background-color: #fff;
                 transition: all 0.4s ease-out 0s;
               }
             }
@@ -123,6 +123,7 @@ header {
         display: none;
     }
     .headerBottom {
+      padding: 20px 0;
       .row {
         .navBar {
           display: none;
