@@ -46,6 +46,8 @@
 }
 header {
   width: 100%;
+  position: fixed;
+  z-index: 999;
 }
 header .headerTop {
   width: 100%;
@@ -68,7 +70,7 @@ header .headerTop .row .socialList {
   display: flex;
 }
 header .headerTop .row .socialList .socialItem a {
-  padding-left: 19px;
+  padding-left: 21px;
   color: #fff;
   font-size: 16px;
 }
@@ -130,7 +132,31 @@ header .headerBottom .row .navBar .navList .navItem a::after {
   transition: all 0.4s ease-out 0s;
 }
 header .headerBottom .row .navBar .navList .navItem .dropDownList {
+  position: absolute;
+  width: 170px;
+  background: #e29c89;
+  left: 0;
+  top: 55px;
+  visibility: hidden;
+  opacity: 0;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);
+  padding: 17px 0;
+  transition: all 0.4s ease-out 0s;
+}
+header .headerBottom .row .navBar .navList .navItem .dropDownList .dropItem a {
+  padding: 6px 10px;
+  color: #fff;
+  transition: all 0.4s ease-out 0s;
+}
+header .headerBottom .row .navBar .navList .navItem .dropDownList .dropItem a::after {
   display: none;
+}
+header .headerBottom .row .navBar .navList .navItem .dropDownList .dropItem a:hover {
+  transform: translateX(5px);
+}
+header .headerBottom .row .navBar .navList .navItem:hover .dropDownList {
+  visibility: visible;
+  opacity: 1;
 }
 header .headerBottom .row .navBar .navList .navItem:hover a::after {
   left: 0;
@@ -165,25 +191,231 @@ header .headerBottom .row i {
     display: block;
   }
 }
+.footer {
+  width: 100%;
+  padding: 99px 0;
+  background-color: #191514;
+}
+.footer .container .row {
+  flex-wrap: wrap;
+}
+.footer .container .row .logoSide {
+  width: 25%;
+  padding: 0 12px;
+}
+.footer .container .row .logoSide .footerLogo {
+  display: inline-block;
+  margin-bottom: 25px;
+}
+.footer .container .row .logoSide .footerLogo img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.footer .container .row .logoSide .logoInfo {
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 22px;
+}
+.footer .container .row .logoSide .footerSocialList {
+  display: flex;
+  gap: 18px;
+}
+.footer .container .row .logoSide .footerSocialList .footerSocialItem a {
+  color: #656565;
+  font-size: 17px;
+  position: relative;
+  top: 0;
+  transition: all 0.4s ease-out 0s;
+}
+.footer .container .row .logoSide .footerSocialList .footerSocialItem a:hover {
+  color: #e29c89;
+  top: -3px;
+}
+.footer .container .row .navigationSide {
+  width: 25%;
+  padding: 0 12px 0 100px;
+}
+.footer .container .row .navigationSide .navTitle {
+  font-family: "Libre Baskerville", serif;
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 29px;
+  font-weight: 400;
+}
+.footer .container .row .navigationSide .footerNavBar .footerNavList .footerNavItem {
+  margin-bottom: 6px;
+}
+.footer .container .row .navigationSide .footerNavBar .footerNavList .footerNavItem a {
+  color: #fff;
+  font-weight: 300;
+  transform: translateX(0);
+  display: block;
+  transition: all 0.3s ease-out 0s;
+}
+.footer .container .row .navigationSide .footerNavBar .footerNavList .footerNavItem a:hover {
+  color: #fff;
+  text-decoration: underline;
+  transform: translateX(3px);
+}
+.footer .container .row .contactSide {
+  width: 25%;
+  padding: 0 12px;
+}
+.footer .container .row .contactSide .contactTitle {
+  font-family: "Libre Baskerville", serif;
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 29px;
+  font-weight: 400;
+}
+.footer .container .row .contactSide .contactList .contactItem {
+  margin-bottom: 6px;
+}
+.footer .container .row .contactSide .contactList .contactItem a {
+  color: #fff;
+  font-weight: 300;
+  transform: translateX(0);
+  display: block;
+  transition: all 0.3s ease-out 0s;
+}
+.footer .container .row .contactSide .contactList .contactItem a:hover {
+  text-decoration: underline;
+  transform: translateX(3px);
+}
+.footer .container .row .contactSide .contactList .contactItem .different {
+  color: #e29c89;
+}
+.footer .container .row .formSide {
+  width: 25%;
+  padding: 0 12px;
+}
+.footer .container .row .formSide .formTitle {
+  font-family: "Libre Baskerville", serif;
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 29px;
+  font-weight: 200;
+}
+.footer .container .row .formSide .formText {
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+.footer .container .row .formSide form input {
+  width: 100%;
+  height: 47px;
+  padding: 10px 17px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  background-color: transparent;
+  font-size: 17px;
+}
+.footer .container .row .formSide form button {
+  font-weight: 500;
+  font-size: 15px;
+  padding: 17px 22px;
+  background: #e29c89;
+  line-height: 1;
+  width: 100%;
+  display: block;
+  margin-top: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-out 0s;
+}
+.footer .container .row .formSide form button:hover {
+  color: #e29c89;
+  background-color: #fff;
+}
+
+@media (max-width: 992px) {
+  .footer .container .row .logoSide {
+    width: 50%;
+  }
+  .footer .container .row .navigationSide {
+    width: 50%;
+  }
+  .footer .container .row .contactSide {
+    width: 50%;
+    padding-top: 20px;
+  }
+  .footer .container .row .formSide {
+    padding-top: 20px;
+    padding-left: 100px;
+    width: 50%;
+  }
+}
+@media (max-width: 575px) {
+  .footer .container .row .logoSide {
+    width: 100%;
+  }
+  .footer .container .row .navigationSide {
+    width: 100%;
+    padding-left: 12px;
+    padding-top: 20px;
+  }
+  .footer .container .row .contactSide {
+    width: 100%;
+  }
+  .footer .container .row .formSide {
+    padding-left: 12px;
+    width: 100%;
+  }
+}
+main .hero {
+  background-image: url(../image/hero\ bg.webp);
+  width: 100%;
+  height: 735px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+main .hero .container .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .hero .container .title .heroTitle {
+  width: 100%;
+  height: 100%;
+  font-family: "Libre Baskerville", serif;
+  font-size: 57px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 7px;
+  text-align: center;
+  transform: translateY(200px);
+}
 main .services {
   width: 100%;
   padding: 120px 0;
 }
+main .services .container .row {
+  flex-wrap: wrap;
+}
 main .services .container .row .servicesLeft {
+  max-width: 41.6%;
+  flex: 0 0 41.6%;
   padding: 0 12px;
 }
 main .services .container .row .servicesLeft img {
+  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   transform: translateY(5%);
+  vertical-align: middle;
 }
 main .services .container .row .servicesMiddle {
+  max-width: 33.3%;
+  flex: 0 0 33.3%;
   padding: 0 12px;
   transform: translateY(13%);
 }
 main .services .container .row .servicesMiddle .servicesTitle {
   font-family: "Libre Baskerville", serif;
-  font-size: 42px;
+  font-size: 40px;
   font-weight: 400;
   line-height: 1.3;
   margin-bottom: 12px;
@@ -211,18 +443,52 @@ main .services .container .row .servicesMiddle a:hover {
   color: #fff;
 }
 main .services .container .row .servicesRight {
+  max-width: 25%;
+  flex: 0 0 25%;
   padding: 0 12px;
 }
 main .services .container .row .servicesRight img {
+  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
 @media (max-width: 1400px) {
   main .services .container .row .servicesMiddle .servicesTitle {
-    font-size: 40px;
+    font-size: 36px;
+  }
+}
+@media (max-width: 1200px) {
+  main .services .container .row .servicesLeft {
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+  main .services .container .row .servicesMiddle {
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+  main .services .container .row .servicesRight {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  main .services {
+    padding: 80px 0;
+  }
+  main .services .container .row .servicesLeft {
+    max-width: 100%;
+    flex: 0 0 100%;
+    padding-bottom: 40px;
+  }
+  main .services .container .row .servicesMiddle {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  main .services .container .row .servicesMiddle .servicesTitle {
+    font-size: 30px;
   }
 }
 main .rooms {
+  width: 100%;
   background: #f9f8f8;
   padding: 110px 0 0 0;
 }
@@ -230,7 +496,7 @@ main .rooms .container .row {
   justify-content: space-between;
 }
 main .rooms .container .row .sectionTitle {
-  width: 33%;
+  width: 100%;
   padding: 0 12px;
   margin-bottom: 30px;
 }
@@ -277,7 +543,7 @@ main .rooms .container .roomCardsBox .row .card {
   position: relative;
 }
 main .rooms .container .roomCardsBox .row .card img {
-  width: 100%;
+  max-width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -308,13 +574,44 @@ main .rooms .container .roomCardsBox .row .card .cardInfo span .price {
   color: #fff;
   margin-left: 12px;
 }
-
-.hotel {
+@media (max-width: 1200px) {
+  main .rooms {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  main .rooms .container {
+    width: 100%;
+  }
+  main .rooms .container .row .sectionTitle {
+    width: 100%;
+  }
+  main .rooms .container .row .sectionTitle h2 {
+    font-size: 30px;
+  }
+  main .rooms .container .roomCardsBox .row .card {
+    width: 50%;
+  }
+  main .rooms .container .roomCardsBox .row .card:nth-child(1) {
+    display: none;
+  }
+  main .rooms .container .roomCardsBox .row .card .cardInfo a {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  main .rooms .container .roomCardsBox .row .card {
+    width: 100%;
+  }
+  main .rooms .container .roomCardsBox .row .card:nth-child(2) {
+    display: none;
+  }
+}
+main .hotel {
   width: 100%;
   padding: 120px 0;
   position: relative;
 }
-.hotel::before {
+main .hotel::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -322,20 +619,21 @@ main .rooms .container .roomCardsBox .row .card .cardInfo span .price {
   top: 0;
   left: 0px;
   z-index: -1;
-  background: #F9F8F8;
+  background: #f9f8f8;
 }
-.hotel .container .sectionTitle {
-  margin: 0 200px;
+main .hotel .container .sectionTitle {
+  width: 100%;
   text-align: center;
+  margin: 50px auto;
 }
-.hotel .container .sectionTitle h2 {
+main .hotel .container .sectionTitle h2 {
   font-size: 42px;
   display: block;
   font-weight: 300;
   line-height: 1.3;
   margin-bottom: 12px;
 }
-.hotel .container .sectionTitle .link a {
+main .hotel .container .sectionTitle .sectionLink a {
   transition: all 0.3s ease-out 0s;
   color: #191514;
   font-size: 18px;
@@ -343,32 +641,31 @@ main .rooms .container .roomCardsBox .row .card .cardInfo span .price {
           text-decoration: dotted underline;
   letter-spacing: 0.5px;
 }
-.hotel .container .sectionTitle .link:hover {
+main .hotel .container .sectionTitle .sectionLink:hover {
   transform: scale(1.01);
 }
-.hotel .container .sectionTitle .link:hover a {
+main .hotel .container .sectionTitle .sectionLink:hover a {
   letter-spacing: 0.6px;
 }
-.hotel .container .row {
+main .hotel .container .row {
   padding: 60px 100px 0;
 }
-.hotel .container .row .hotelImg {
+main .hotel .container .row .hotelImg {
   width: 50%;
 }
-.hotel .container .row .hotelImg img {
+main .hotel .container .row .hotelImg img {
   width: 100%;
-  height: 520px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.hotel .container .row .hotelInfo {
+main .hotel .container .row .hotelInfo {
   width: 50%;
   padding: 60px 31px;
   background: #191514;
-  height: 520px;
   text-align: center;
 }
-.hotel .container .row .hotelInfo .hotelTitle .titleContent {
+main .hotel .container .row .hotelInfo .hotelTitle .titleContent {
   font-family: "Libre Baskerville", serif;
   color: white;
   font-size: 42px;
@@ -376,13 +673,13 @@ main .rooms .container .roomCardsBox .row .card .cardInfo span .price {
   margin-bottom: 30px;
   font-weight: 400;
 }
-.hotel .container .row .hotelInfo .hotelsInfo {
+main .hotel .container .row .hotelInfo .hotelsInfo {
   font-size: 18px;
   line-height: 1.5;
   color: #fff;
   margin: 40px 0;
 }
-.hotel .container .row .hotelInfo .hotelBtn {
+main .hotel .container .row .hotelInfo .hotelBtn {
   color: #e29c89;
   border: 1px solid #e29c89;
   display: inline-block;
@@ -391,25 +688,80 @@ main .rooms .container .roomCardsBox .row .card .cardInfo span .price {
   background: none;
   transition: 0.3s ease all;
 }
-.hotel .container .row .hotelInfo .hotelBtn:hover {
+main .hotel .container .row .hotelInfo .hotelBtn:hover {
   background-color: #e29c89;
   color: #fff;
 }
-
-.video {
+@media (max-width: 1200px) {
+  main .hotel .container .sectionTitle {
+    text-align: center;
+  }
+  main .hotel .container .row {
+    padding: 0;
+  }
+  main .hotel .container .row .hotelImg {
+    width: 50%;
+  }
+  main .hotel .container .row .hotelInfo {
+    width: 50%;
+    padding: 60px 31px;
+  }
+  main .hotel .container .row .hotelInfo .hotelsInfo {
+    font-size: 15px;
+  }
+}
+@media (max-width: 992px) {
+  main .hotel .container .row .hotelImg {
+    width: 50%;
+  }
+  main .hotel .container .row .hotelInfo {
+    width: 50%;
+    padding: 35px 22px;
+  }
+  main .hotel .container .row .hotelInfo .hotelTitle .titleContent {
+    font-size: 28px;
+  }
+  main .hotel .container .row .hotelInfo .hotelsInfo {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  main .hotel .container .row {
+    flex-direction: column;
+  }
+  main .hotel .container .row .hotelImg {
+    width: 100%;
+  }
+  main .hotel .container .row .hotelImg img {
+    vertical-align: middle;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main .hotel .container .row .hotelInfo {
+    width: 100%;
+    padding: 68px 40px;
+  }
+  main .hotel .container .row .hotelInfo .hotelTitle .titleContent {
+    font-size: 42px;
+  }
+  main .hotel .container .row .hotelInfo .hotelTitle .hotelsInfo {
+    font-size: 18px;
+  }
+}
+main .video {
   width: 100%;
 }
-.video .videoContent {
+main .video .videoContent {
   width: 100%;
   padding: 0 50px;
   position: relative;
 }
-.video .videoContent .videoImg {
+main .video .videoContent .videoImg {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.video .iconBorder {
+main .video .iconBorder {
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -417,14 +769,14 @@ main .rooms .container .roomCardsBox .row .card .cardInfo span .price {
   position: absolute;
   top: 50%;
   bottom: 50%;
-  left: 50%;
+  left: 45%;
   right: 50%;
   z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.video .iconBorder:after {
+main .video .iconBorder:after {
   position: absolute;
   border: 100px solid rgba(25, 21, 20, 0.2);
   content: "";
@@ -435,7 +787,7 @@ main .rooms .container .roomCardsBox .row .card .cardInfo span .price {
   z-index: 0;
   background: rgba(0, 0, 0, 0);
 }
-.video .iconBorder .borderInIcon {
+main .video .iconBorder .borderInIcon {
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -444,7 +796,153 @@ main .rooms .container .roomCardsBox .row .card .cardInfo span .price {
   align-items: center;
   justify-content: center;
 }
-.video .iconBorder .borderInIcon .fa-play {
-  color: #656565;
+main .video .iconBorder .borderInIcon .fa-play {
+  color: #fff;
   font-size: 40px;
+}
+main .meal {
+  width: 100%;
+  padding: 120px 0;
+}
+main .meal .container .mealTitle {
+  display: flex;
+  justify-content: center;
+  font-family: "Libre Baskerville", serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+main .meal .container .mealCardBox {
+  width: 100%;
+  padding-top: 30px;
+}
+main .meal .container .mealCardBox .row {
+  flex-wrap: wrap;
+}
+main .meal .container .mealCardBox .row .mealCard {
+  width: 33%;
+  padding: 0 12px;
+}
+main .meal .container .mealCardBox .row .mealCard .mealImage {
+  width: 100%;
+  position: relative;
+  transition: all 0.4s ease-out 0s;
+}
+main .meal .container .mealCardBox .row .mealCard .mealImage::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 98.5%;
+  background: rgba(25, 21, 20, 0.3);
+  z-index: 0;
+}
+main .meal .container .mealCardBox .row .mealCard .mealImage img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .meal .container .mealCardBox .row .mealCard .mealImage .mealName {
+  width: 100%;
+  position: absolute;
+  bottom: 10%;
+  display: flex;
+  justify-content: center;
+  transition: all 0.4s ease-out 0s;
+}
+main .meal .container .mealCardBox .row .mealCard .mealImage .mealName a {
+  color: #fff;
+  font-size: 27px;
+  font-weight: 400;
+  font-family: "Libre Baskerville", serif;
+  transition: all 0.4s ease-out 0s;
+}
+main .meal .container .mealCardBox .row .mealCard .mealImage .mealName a:hover {
+  color: #e29c89;
+}
+main .meal .container .mealCardBox .row .mealCard .mealImage .mealContent {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  bottom: 25px;
+  padding: 0 15px;
+  text-align: center;
+  z-index: 1;
+  transition: all 0.4s ease-out 0s;
+}
+main .meal .container .mealCardBox .row .mealCard .mealImage .mealContent .contentName {
+  font-family: "Libre Baskerville", serif;
+  color: #fff;
+  font-size: 27px;
+  font-weight: 400;
+  transition: all 0.4s ease-out 0s;
+}
+main .meal .container .mealCardBox .row .mealCard .mealImage .mealContent .contentName:hover {
+  color: #e29c89;
+}
+main .meal .container .mealCardBox .row .mealCard .mealImage .mealContent .contentInfo {
+  margin-bottom: 10px;
+  color: #fff;
+  font-weight: 300;
+  font-size: 16px;
+}
+main .meal .container .mealCardBox .row .mealCard .mealImage:hover .mealName {
+  opacity: 0;
+  visibility: hidden;
+}
+main .meal .container .mealCardBox .row .mealCard .mealImage:hover .mealContent {
+  opacity: 1;
+  visibility: visible;
+}
+main .feedback {
+  width: 100%;
+  background: #B86E5A;
+  padding: 60px 40px;
+}
+main .feedback .feedbackCardBox {
+  width: 100%;
+}
+main .feedback .feedbackCardBox .row {
+  gap: 80px;
+}
+main .feedback .feedbackCardBox .row .feedbackCard {
+  width: 50%;
+  display: flex;
+}
+main .feedback .feedbackCardBox .row .feedbackCard .feedIcon {
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+main .feedback .feedbackCardBox .row .feedbackCard .feedIcon i {
+  border: #fff solid 1px;
+  border-radius: 50%;
+  padding: 15px;
+}
+main .feedback .feedbackCardBox .row .feedbackCard .iconLeft {
+  margin-right: 30px;
+}
+main .feedback .feedbackCardBox .row .feedbackCard .iconRight {
+  margin-left: 30px;
+}
+main .feedback .feedbackCardBox .row .feedbackCard .feedContent {
+  color: #fff;
+}
+main .feedback .feedbackCardBox .row .feedbackCard .feedContent .feedTitle {
+  font-weight: 400;
+  font-size: 30px;
+  margin-bottom: 37px;
+}
+main .feedback .feedbackCardBox .row .feedbackCard .feedContent .feedInfo {
+  font-weight: 300;
+  font-size: 24px;
+  margin-bottom: 37px;
+}
+main .feedback .feedbackCardBox .row .feedbackCard .feedContent .feedName {
+  font-weight: 300;
+  font-size: 20px;
 }/*# sourceMappingURL=index.css.map */

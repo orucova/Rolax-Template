@@ -1,26 +1,59 @@
 main {
+  //* --------------------------- Start Hero Section --------------------------- */
+  .hero{
+    background-image: url(../image/hero\ bg.webp);
+    width: 100%;
+    height: 735px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+.container{
+  .title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .heroTitle{
+  width: 100%;
+  height: 100%;
+      font-family: $secondary-font;
+      font-size: 57px;
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.3;
+      margin-bottom: 7px;
+      text-align: center;
+      transform: translateY(200px);
+    }
+  }
+}
+  }
+  //? ---------------------------- End Hero Section ---------------------------- */
   //* ------------------------- Start Services Section ------------------------- */
   .services {
     width: 100%;
     padding: 120px 0;
     .container {
       .row {
-        // flex-wrap: wrap;
+        flex-wrap: wrap;
         .servicesLeft {
+          max-width: 41.6%;
+          flex: 0 0  41.6%;
           padding: 0 12px;
-          // width: 41.6%;
           img {
+            width: 100%;
             object-fit: contain;
             transform: translateY(5%);
+            vertical-align: middle;
           }
         }
         .servicesMiddle {
+          max-width: 33.3%;
+          flex: 0 0 33.3%;
           padding: 0 12px;
-          // width: 33.3%;
           transform: translateY(13%);
           .servicesTitle {
             font-family: $secondary-font;
-            font-size: 42px;
+            font-size: 40px;
             font-weight: 400;
             line-height: 1.3;
             margin-bottom: 12px;
@@ -39,9 +72,11 @@ main {
           }
         }
         .servicesRight {
+          max-width: 25%;
+          flex: 0 0 25%;
           padding: 0 12px;
-          // width: 25%;
           img {
+            width:100% ;
             object-fit: contain;
           }
         }
@@ -52,10 +87,58 @@ main {
   @media (max-width: 1400px) {
     .services {
       .container {
+
         .row {
-          .servicesMiddle {
-            .servicesTitle {
-              font-size: 40px;
+          .servicesLeft{
+
+          }
+          .servicesMiddle{
+.servicesTitle{
+  font-size: 36px;
+}
+          }
+          .servicesRight{
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .services {
+      .container {
+        .row {
+          .servicesLeft{
+            max-width: 50%;
+            flex:0 0 50%;
+          }
+          .servicesMiddle{
+            max-width: 50%;
+            flex:0 0 50%;
+          }
+          .servicesRight{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .services {
+      padding: 80px 0;
+      .container {
+        .row {
+          .servicesLeft{
+            max-width: 100%;
+            flex: 0 0 100%;
+            padding-bottom: 40px;
+          }
+          .servicesMiddle{
+            max-width: 100%;
+            flex: 0 0 100%;
+            .servicesTitle{
+              font-size: 30px;
             }
           }
         }
@@ -63,52 +146,54 @@ main {
     }
   }
 
+
   //? -------------------------- End Services Section -------------------------- */
   //* --------------------------- Start Rooms Section -------------------------- */
   .rooms {
+    width: 100%;
     background: #f9f8f8;
     padding: 110px 0 0 0;
     .container {
-.row{
-  justify-content: space-between;
-  .sectionTitle {
-    width: 33%;
-    padding: 0 12px;
-    margin-bottom: 30px;
-    h2 {
-      font-family: $secondary-font;
-      font-size: 42px;
-      font-weight: 400;
-      line-height: 1.3;
-      margin-bottom: 12px;
-    }
-    .sectionInfo {
-      color: #656565;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 1.5;
-    }
-  }
-  .sectionBtn{
-    display: flex;
-    align-items: center;
-  a{
-    display: inline-block;
-    border: 1px solid #0000002b;
-    border-radius: 50px;
-    transition: .3s ease all;
-    margin-right: 13px;
-    i{
-      font-size: 20px;
-      color: rgba(0, 0, 0, 0.699);
-      padding: 15px 27px;
-    }
-    &:hover{
-      border-color: black;
-    }
-  }
-  }
-}
+      .row {
+        justify-content: space-between;
+        .sectionTitle {
+          width: 100%;
+          padding: 0 12px;
+          margin-bottom: 30px;
+          h2 {
+            font-family: $secondary-font;
+            font-size: 42px;
+            font-weight: 400;
+            line-height: 1.3;
+            margin-bottom: 12px;
+          }
+          .sectionInfo {
+            color: #656565;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.5;
+          }
+        }
+        .sectionBtn {
+          display: flex;
+          align-items: center;
+          a {
+            display: inline-block;
+            border: 1px solid #0000002b;
+            border-radius: 50px;
+            transition: 0.3s ease all;
+            margin-right: 13px;
+            i {
+              font-size: 20px;
+              color: rgba(0, 0, 0, 0.699);
+              padding: 15px 27px;
+            }
+            &:hover {
+              border-color: black;
+            }
+          }
+        }
+      }
       .roomCardsBox {
         width: 100%;
         .row {
@@ -117,7 +202,7 @@ main {
             width: 33%;
             position: relative;
             img {
-              width: 100%;
+              max-width: 100%;
               object-fit: contain;
             }
             .cardInfo {
@@ -139,17 +224,15 @@ main {
                 color: #fff;
                 font-weight: 300;
               }
-              
 
-                color: #fff;
-                font-weight: 300;
-                span {
-                  .price {
-                    font-size: 24px;
-                    font-weight: 400;
-                    color: #fff;
-                    margin-left: 12px;
-                  }
+              color: #fff;
+              font-weight: 300;
+              span {
+                .price {
+                  font-size: 24px;
+                  font-weight: 400;
+                  color: #fff;
+                  margin-left: 12px;
                 }
               }
             }
@@ -158,145 +241,450 @@ main {
       }
     }
   }
-  //? ---------------------------- End Rooms Section --------------------------- */
-  //* --------------------------- Start Hotel Section -------------------------- */
-  .hotel{
-    width: 100%;
-    padding: 120px 0;
-    position: relative;
-    &::before{
-      content: "";
-      position: absolute;
+
+
+@media (max-width: 1200px){
+  .rooms{
+    
+    padding-left: 30px;
+    padding-right: 30px;
+    .container{
       width: 100%;
-      height: 65%;
-      top: 0;
-      left: 0px;
-      z-index: -1;
-      background: #F9F8F8;
+      .row{
+
+        .sectionTitle{
+          width: 100%;
+          h2{
+            font-size: 30px;
+          }
+        }
+      }
     }
+      .container{
+        .roomCardsBox{
+          .row{
+            .card{
+              width: 50%;
+              &:nth-child(1){
+                display: none;
+              }
+            
+              .cardInfo{
+                a{
+                  font-size: 18px;
+                }
+              }
+            }
+          }
+        }
+      }
+      
+    }
+  }
+  @media (max-width: 768px){
+    .rooms{
+        .container{
+          .roomCardsBox{
+            .row{
+              .card{
+                width: 100%;
+                &:nth-child(2){
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+        
+      }
+    }
+
+
+
+
+
+//? ---------------------------- End Rooms Section --------------------------- */
+//* --------------------------- Start Hotel Section -------------------------- */
+.hotel {
+  width: 100%;
+  padding: 120px 0;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 65%;
+    top: 0;
+    left: 0px;
+    z-index: -1;
+    background: #f9f8f8;
+  }
+  .container {
+    .sectionTitle {
+      width: 100%;
+      text-align: center;
+      margin: 50px auto;
+      h2 {
+        font-size: 42px;
+        display: block;
+        font-weight: 300;
+        line-height: 1.3;
+        margin-bottom: 12px;
+      }
+      .sectionLink {
+        a {
+          transition: all 0.3s ease-out 0s;
+          color: $black;
+          font-size: 18px;
+          text-decoration: dotted underline;
+          letter-spacing: 0.5px;
+        }
+        &:hover {
+          transform: scale(1.01);
+          a {
+            letter-spacing: 0.6px;
+          }
+        }
+      }
+    }
+    .row {
+      padding: 60px 100px 0;
+      .hotelImg {
+        width: 50%;
+        // height: 520px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .hotelInfo {
+        width: 50%;
+        padding: 60px 31px;
+        background: $black; 
+        // height: 520px;
+        text-align: center;
+        .hotelTitle {
+          .titleContent {
+            font-family: $secondary-font;
+            color: #ffff;
+            font-size: 42px;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            font-weight: 400;
+          }
+        }
+        .hotelsInfo {
+          font-size: 18px;
+          line-height: 1.5;
+          color: #fff;
+          margin: 40px 0;
+        }
+        .hotelBtn {
+          @include primaryBtn();
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px){
+  .hotel {
 .container{
   .sectionTitle{
-    margin: 0 200px;
     text-align: center;
-    h2{
-      font-size: 42px;
-      display: block;
-      font-weight: 300;
-      line-height: 1.3;
-      margin-bottom: 12px;
-    }
-    .link{
-      a{
-        transition: all .3s ease-out 0s;
-        color: $black;
-      font-size: 18px;
-      text-decoration: dotted underline;
-      letter-spacing: 0.5px;
-    }
-    &:hover{
-      transform: scale(1.01);
-      a{
-        letter-spacing: 0.6px;
-      }
-    }
-    }
+    // margin: 50px 100px;
   }
-  .row{
-    padding: 60px 100px 0;
-    .hotelImg{
+  .row {
+    padding:  0;
+    .hotelImg {
       width: 50%;
-      img{
-        width: 100%;
-    height: 520px;
-    object-fit: contain;
-      }
     }
-    .hotelInfo{
+    .hotelInfo {
       width: 50%;
       padding: 60px 31px;
-      background: $black;
-      height: 520px;
-      text-align: center;
-      .hotelTitle{
-        .titleContent{
-          font-family: $secondary-font;
-          color: #ffff;
-    font-size: 42px;
-    line-height: 1.2;
-    margin-bottom: 30px;
-    font-weight: 400;
-   
-        }
-      }
-      .hotelsInfo{
-        font-size: 18px;
-    line-height: 1.5;
-    color: #fff;
-    margin: 40px 0;
-}
-.hotelBtn{
-  @include primaryBtn();
-}
+      .hotelsInfo {
+        font-size: 15px;
       }
     }
   }
 }
-  
-  //? ---------------------------- End Hotel Section --------------------------- */
-  //* --------------------------- Start Video Section -------------------------- */
-  .video{
-    width: 100%;
-    
-      .videoContent{
-        width: 100%;
-        padding: 0 50px;
-        position: relative;
-        .videoImg{
-          width: 100%;
-          object-fit: contain;
+}
+  }
+
+
+  @media (max-width: 992px){
+    .hotel {
+  .container{
+    .sectionTitle{
+      // margin: 50px 0px;
+    }
+    .row {
+      .hotelImg {
+        width: 50%;
+      }
+      .hotelInfo {
+        width: 50%;
+        padding: 35px 22px;
+        .hotelTitle{
+          .titleContent{
+            font-size: 28px;
+          }
+        }
+        .hotelsInfo {
+          font-size: 15px;
         }
       }
-      .iconBorder{
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        border: 1px solid #fff;
-        position: absolute;
-        top: 50%;
-        bottom: 50%;
-        left: 50%;
-        right: 50%;
-        z-index: 10;
+    }
+  }
+  }
+    }
+    @media (max-width: 768px){
+      .hotel {
+    .container{
+      .sectionTitle{
+        // margin: 50px 0px;
+      }
+      .row {
+        flex-direction: column;
+        .hotelImg {
+          width: 100%;
+          img{
+            vertical-align: middle;
+            object-fit: cover;
+          }
+        }
+        .hotelInfo {
+          width: 100%;
+          padding: 68px 40px;
+          .hotelTitle{
+            .titleContent{
+              font-size: 42px;
+          }
+          .hotelsInfo {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    }
+      }
+    }
+
+//? ---------------------------- End Hotel Section --------------------------- */
+//* --------------------------- Start Video Section -------------------------- */
+.video {
+  width: 100%;
+
+  .videoContent {
+    width: 100%;
+    padding: 0 50px;
+    position: relative;
+    .videoImg {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  .iconBorder {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 45%;
+    right: 50%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:after {
+      position: absolute;
+      border: 100px solid rgba(25, 21, 20, 0.2);
+      content: "";
+      border-radius: 50%;
+      left: -42px;
+      top: -42px;
+      right: 0;
+      z-index: 0;
+      background: #0000;
+    }
+    .borderInIcon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 3px solid #fff;
       display: flex;
       align-items: center;
       justify-content: center;
-      &:after{
-        position: absolute;
-        border: 100px solid rgba(25,21,20,0.2);
-        content: "";
-        border-radius: 50%;
-        left: -42px;
-        top: -42px;
-        right: 0;
-        z-index: 0;
-        background: #0000;
-      }
-      .borderInIcon{
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        border: 3px solid #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .fa-play{
-          color: #656565;
-         font-size: 40px;
-        }
-        }
-
+      .fa-play {
+        color: #fff;
+        font-size: 40px;
       }
     }
-  
-  //? ---------------------------- End Video Section --------------------------- */
+  }
+}
 
+//? ---------------------------- End Video Section --------------------------- */
+//* --------------------------- Start Meal Section --------------------------- */
+.meal {
+  width: 100%;
+  padding: 120px 0;
+  .container {
+    .mealTitle {
+      display: flex;
+      justify-content: center;
+      font-family: $secondary-font;
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+    .mealCardBox {
+      width: 100%;
+      padding-top: 30px;
+
+      .row {
+        flex-wrap: wrap;
+
+        .mealCard {
+          width: 33%;
+          padding: 0 12px;
+          .mealImage {
+            width: 100%;
+            position: relative;
+            transition: all .4s ease-out 0s;
+            &::before {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 0;
+              right: 0;
+              width: 100%;
+              height: 98.5%;
+              background: rgba(25, 21, 20, 0.3);
+              z-index: 0;
+            }
+            img {
+              width: 100%;
+              object-fit: contain;
+            }
+            .mealName {
+              width: 100%;
+              position: absolute;
+              bottom: 10%;
+              display: flex;
+              justify-content: center;
+              transition: all .4s ease-out 0s;
+              a {
+                color: #fff;
+                font-size: 27px;
+                font-weight: 400;
+                font-family: $secondary-font;
+                transition: all 0.4s ease-out 0s;
+                &:hover {
+                  color: $light-orange;
+                }
+              }
+            }
+            .mealContent {
+              opacity: 0;
+              visibility: hidden;
+              position: absolute;
+              bottom: 25px;
+              padding: 0 15px;
+              text-align: center;
+              z-index: 1;
+              transition: all .4s ease-out 0s;
+              .contentName {
+                font-family: $secondary-font;
+                color: #fff;
+                font-size: 27px;
+                font-weight: 400;
+                transition: all .4s ease-out 0s;
+                &:hover{
+                  color: $light-orange;
+                }
+              }
+              .contentInfo {
+                margin-bottom: 10px;
+                color: #fff;
+                font-weight: 300;
+                font-size: 16px;
+              }
+            }
+            &:hover{
+              .mealName{
+                opacity: 0;
+                visibility: hidden;
+              }
+              .mealContent{
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//? ---------------------------- End Meal Section ---------------------------- */
+//* ------------------------- Start Feedback Section ------------------------- */
+.feedback{
+  width: 100%;
+  background: #B86E5A;
+  padding: 60px 40px;
+  .feedbackCardBox{
+    width: 100%;
+.row{
+  gap: 80px;
+.feedbackCard{
+width: 50%;
+display: flex;
+.feedIcon{
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  i{
+    border: #fff solid 1px;
+    border-radius: 50%;
+    padding: 15px;
+
+  }
+}
+.iconLeft{
+  margin-right: 30px;
+}
+.iconRight{
+  margin-left: 30px;
+}
+.feedContent{
+  color: #fff;
+  .feedTitle{
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 37px;
+  }
+  .feedInfo{
+    font-weight: 300;
+    font-size: 24px;
+    margin-bottom: 37px;
+  }
+  .feedName{
+    font-weight: 300;
+    font-size: 20px;
+  }
+}
+
+}
+}
+  }
+}
+  
+
+//? -------------------------- End Feedback Section -------------------------- */
+}
