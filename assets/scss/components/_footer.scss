@@ -1,0 +1,197 @@
+.footer {
+  width: 100%;
+  padding: 99px 0;
+  background-color: $black;
+  .container {
+    .row {
+      flex-wrap: wrap;
+      .logoSide {
+        width: 25%;
+        padding: 0 12px;
+        .footerLogo {
+          display: inline-block;
+          margin-bottom: 25px;
+          img {
+            width: 100%;
+            object-fit: contain;
+          }
+        }
+        .logoInfo {
+          color: #fff;
+          font-weight: 300;
+          margin-bottom: 22px;
+        }
+        .footerSocialList {
+          display: flex;
+          gap: 18px;
+          .footerSocialItem {
+            a {
+              color: #656565;
+              font-size: 17px;
+              position: relative;
+              top: 0;
+              transition: all .4s ease-out 0s;
+              &:hover{
+                color: $light-orange;
+                top: -3px;
+              }
+            }
+          }
+        }
+      }
+      .navigationSide{
+        width: 25%;
+        padding: 0 12px 0 100px;
+        .navTitle{
+            font-family: $secondary-font;
+            color: #fff;
+            font-size: 22px;
+            margin-bottom: 29px;
+            font-weight: 400;
+        }
+        .footerNavBar{
+            .footerNavList{
+                .footerNavItem{
+                    margin-bottom: 6px;
+                    a{
+                        color: #fff;
+    font-weight: 300;
+    transform: translateX(0);
+    display: block;
+    transition: all .3s ease-out 0s;
+    &:hover{
+        color: #fff;
+        text-decoration: underline;
+        transform: translateX(3px);
+    }
+                    }
+                }
+            }
+        }
+      }
+      .contactSide{
+        width: 25%;
+        padding: 0 12px;
+        .contactTitle{
+            font-family: $secondary-font;
+            color: #fff;
+            font-size: 22px;
+            margin-bottom: 29px;
+            font-weight: 400;
+        }
+        .contactList{
+            .contactItem{
+                margin-bottom: 6px;
+                a{
+                    color: #fff;
+                    font-weight: 300;
+                    transform: translateX(0);
+                    display: block;
+                    transition: all .3s ease-out 0s;
+                    &:hover{
+                        text-decoration: underline;
+                        transform: translateX(3px);
+                    }
+                }
+                .different{
+                    color: $light-orange;
+                }
+            }
+        }
+      }
+      .formSide{
+        width: 25%;
+        padding: 0 12px;
+        .formTitle{
+            font-family: $secondary-font;
+            color: #fff;
+            font-size: 22px;
+            margin-bottom: 29px;
+            font-weight: 200;
+        }
+        .formText{
+            color: #fff;
+            font-weight: 300;
+            margin-bottom: 15px;
+        }
+        form{
+            input{
+                width: 100%;
+    height: 47px;
+    padding: 10px 17px;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+    background-color: transparent;
+    font-size: 17px;
+
+            }
+            button{
+    font-weight: 500;
+    font-size: 15px;
+    padding: 17px 22px;
+    background: $light-orange;
+    line-height: 1;
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: all .3s ease-out 0s;
+    &:hover{
+        color: $light-orange;
+        background-color: #fff;
+    }
+            }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:992px){
+  .footer {
+    .container {
+      .row {
+        .logoSide {
+          width: 50%;
+        }
+        .navigationSide{
+          width: 50%;
+        }
+        .contactSide{
+          width: 50%;
+          padding-top: 20px;
+        }
+        .formSide{
+          padding-top: 20px;
+          padding-left: 100px;
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:575px){
+  .footer {
+    .container {
+      .row {
+        .logoSide {
+          width: 100%;
+        }
+        .navigationSide{
+          width: 100%;
+          padding-left: 12px;
+          padding-top: 20px;
+        }
+        .contactSide{
+          width: 100%;
+        }
+        .formSide{
+          padding-left: 12px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
