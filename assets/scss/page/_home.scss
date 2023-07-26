@@ -1,239 +1,163 @@
 main {
   //* --------------------------- Start Hero Section --------------------------- */
-  .hero{
+  .hero {
     background-image: url(../image/hero\ bg.webp);
     width: 100%;
-    height: 735px;
+    min-height: 735px;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
     position: relative;
-.container{
-  .title{
+    z-index: 0;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+      background: linear-gradient(
+        to bottom,
+        #b86e5a 0%,
+        rgba(98, 63, 53, 0.49) 26%,
+        rgba(96, 59, 51, 0.47) 27%,
+        rgba(88, 55, 48, 0.43) 29%,
+        rgba(82, 52, 45, 0.41) 30%,
+        rgba(79, 53, 45, 0.39) 31%,
+        rgba(75, 50, 42, 0.37) 32%,
+        rgba(72, 49, 41, 0.35) 33%,
+        rgba(72, 47, 40, 0.33) 34%,
+        rgba(66, 43, 40, 0.31) 35%,
+        rgba(65, 43, 36, 0.29) 36%,
+        rgba(62, 43, 35, 0.27) 37%,
+        rgba(59, 38, 33, 0.25) 38%,
+        rgba(54, 36, 31, 0.23) 39%,
+        rgba(49, 34, 29, 0.21) 40%,
+        rgba(44, 33, 28, 0.19) 41%,
+        rgba(44, 31, 31, 0.17) 42%,
+        rgba(40, 27, 27, 0.15) 43%,
+        rgba(41, 25, 25, 0.13) 44%,
+        rgba(29, 29, 20, 0.11) 45%,
+        rgba(36, 24, 24, 0.09) 46%,
+        rgba(30, 15, 15, 0.07) 47%,
+        rgba(18, 18, 18, 0.05) 48%,
+        rgba(32, 16, 16, 0.06) 49%,
+        rgba(27, 27, 27, 0.07) 50%,
+        rgba(20, 20, 20, 0.09) 52%,
+        rgba(29, 20, 20, 0.1) 53%,
+        rgba(26, 17, 17, 0.11) 54%,
+        rgba(24, 24, 24, 0.12) 55%,
+        rgba(28, 21, 21, 0.14) 57%,
+        rgba(24, 24, 18, 0.16) 59%,
+        rgba(28, 22, 22, 0.17) 60%,
+        rgba(23, 23, 18, 0.21) 64%,
+        rgba(26, 22, 22, 0.22) 65%,
+        rgba(27, 23, 19, 0.25) 68%,
+        rgba(26, 22, 18, 0.26) 69%,
+        rgba(25, 22, 22, 0.27) 70%,
+        rgba(26, 19, 19, 0.29) 72%,
+        rgba(26, 23, 19, 0.3) 73%,
+        rgba(25, 22, 22, 0.31) 74%,
+        rgba(24, 21, 19, 0.35) 78%,
+        rgba(26, 21, 21, 0.36) 79%,
+        rgba(24, 22, 19, 0.39) 82%,
+        rgba(26, 21, 21, 0.41) 84%,
+        rgba(25, 22, 20, 0.6) 100%
+      );
+    }
     display: flex;
     align-items: center;
     justify-content: center;
-    .heroTitle{
-  width: 100%;
-  height: 100%;
-      font-family: $secondary-font;
-      font-size: 57px;
-      font-weight: 400;
-      color: #fff;
-      line-height: 1.3;
-      margin-bottom: 7px;
-      text-align: center;
-      transform: translateY(200px);
-    }
-  }
-}
-  }
-  //? ---------------------------- End Hero Section ---------------------------- */
-  //* ------------------------- Start Services Section ------------------------- */
-  .services {
-    width: 100%;
-    padding: 120px 0;
     .container {
-      .row {
-        flex-wrap: wrap;
-        .servicesLeft {
-          max-width: 41.6%;
-          flex: 0 0  41.6%;
-          padding: 0 12px;
-          img {
-            width: 100%;
-            object-fit: contain;
-            transform: translateY(5%);
-            vertical-align: middle;
-          }
-        }
-        .servicesMiddle {
-          max-width: 33.3%;
-          flex: 0 0 33.3%;
-          padding: 0 12px;
-          transform: translateY(13%);
-          .servicesTitle {
-            font-family: $secondary-font;
-            font-size: 40px;
-            font-weight: 400;
-            line-height: 1.3;
-            margin-bottom: 12px;
-            display: block;
-            color: $black;
-          }
-          .servicesInfo {
-            font-size: 17px;
-            font-weight: 400;
-            line-height: 1.8;
-            color: #656565;
-            margin-bottom: 30px;
-          }
-          a {
-            @include primaryBtn();
-          }
-        }
-        .servicesRight {
-          max-width: 25%;
-          flex: 0 0 25%;
-          padding: 0 12px;
-          img {
-            width:100% ;
-            object-fit: contain;
-          }
-        }
-      }
-    }
-  }
+      height: 100%;
 
-  @media (max-width: 1400px) {
-    .services {
-      .container {
-
-        .row {
-          .servicesLeft{
-
-          }
-          .servicesMiddle{
-.servicesTitle{
-  font-size: 36px;
-}
-          }
-          .servicesRight{
-          }
-        }
-      }
-    }
-  }
-
-  @media (max-width: 1200px) {
-    .services {
-      .container {
-        .row {
-          .servicesLeft{
-            max-width: 50%;
-            flex:0 0 50%;
-          }
-          .servicesMiddle{
-            max-width: 50%;
-            flex:0 0 50%;
-          }
-          .servicesRight{
-            display: none;
-          }
-        }
-      }
-    }
-  }
-
-  @media (max-width: 992px) {
-    .services {
-      padding: 80px 0;
-      .container {
-        .row {
-          .servicesLeft{
-            max-width: 100%;
-            flex: 0 0 100%;
-            padding-bottom: 40px;
-          }
-          .servicesMiddle{
-            max-width: 100%;
-            flex: 0 0 100%;
-            .servicesTitle{
-              font-size: 30px;
-            }
-          }
-        }
-      }
-    }
-  }
-
-
-  //? -------------------------- End Services Section -------------------------- */
-  //* --------------------------- Start Rooms Section -------------------------- */
-  .rooms {
-    width: 100%;
-    background: #f9f8f8;
-    padding: 110px 0 0 0;
-    .container {
-      .row {
-        justify-content: space-between;
-        .sectionTitle {
+      .title {
+        width: 100%;
+        height: 100%;
+        padding: 200px 200px;
+        .heroTitle {
           width: 100%;
-          padding: 0 12px;
-          margin-bottom: 30px;
-          h2 {
-            font-family: $secondary-font;
-            font-size: 42px;
-            font-weight: 400;
-            line-height: 1.3;
-            margin-bottom: 12px;
-          }
-          .sectionInfo {
-            color: #656565;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 1.5;
-          }
+          font-family: $secondary-font;
+          font-size: 55px;
+          font-weight: 400;
+          color: #fff;
+          line-height: 1.3;
+          margin-bottom: 7px;
+          text-align: center;
         }
-        .sectionBtn {
+      }
+      form {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        color: #fff;
+        .dateCheked {
+          width: 48%;
           display: flex;
-          align-items: center;
-          a {
-            display: inline-block;
-            border: 1px solid #0000002b;
-            border-radius: 50px;
-            transition: 0.3s ease all;
-            margin-right: 13px;
+          justify-content: space-between;
+          .checkIn {
+            position: relative;
+            width: 49%;
+            border-bottom: 1px solid #fff;
+            padding-bottom: 15px;
+            p {
+              padding-bottom: 15px;
+            }
             i {
               font-size: 20px;
-              color: rgba(0, 0, 0, 0.699);
-              padding: 15px 27px;
+              color: #fff;
+              padding-right: 20px;
             }
-            &:hover {
-              border-color: black;
+            .date {
+              width: 20px;
+              opacity: 0;
+              position: absolute;
+              left: 0;
+              height: 20px;
             }
           }
         }
-      }
-      .roomCardsBox {
-        width: 100%;
-        .row {
-          gap: 20px;
-          .card {
-            width: 33%;
-            position: relative;
-            img {
-              max-width: 100%;
-              object-fit: contain;
-            }
-            .cardInfo {
-              position: absolute;
-              top: 60%;
-              left: 4%;
-
-              a {
-                font-family: $secondary-font;
-                color: #fff;
-                font-size: 32px;
-                transition: 0.3s ease all;
-                &:hover {
-                  color: $light-orange;
-                }
-              }
-              p {
-                margin-bottom: 10px;
-                color: #fff;
-                font-weight: 300;
-              }
-
+        .btnSelects {
+          width: 50%;
+          display: flex;
+          align-items: end;
+          justify-content: space-between;
+          .selectBtn {
+            width: 66%;
+            display: flex;
+            gap: 13px;
+            .heroSelect {
+              width: 49%;
+              height: 50px;
+              padding: 0 60px;
+              background-color: transparent;
+              border: 1px solid #fff;
+              font-size: 17px;
               color: #fff;
-              font-weight: 300;
-              span {
-                .price {
-                  font-size: 24px;
-                  font-weight: 400;
-                  color: #fff;
-                  margin-left: 12px;
-                }
+            }
+          }
+
+          .heroBtn {
+            width: 32%;
+            display: inline-block;
+            height: 50px;
+            a {
+              background: #fff;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 100%;
+              padding: 15px 65px 20px 65px;
+              color: #232c26;
+              font-size: 20px;
+              transition: .4s ease-in-out all;
+              &:hover{
+                background-color: $light-orange;
+                color: #fff;
               }
             }
           }
@@ -241,36 +165,417 @@ main {
       }
     }
   }
+  @media (max-width: 1200px) {
+    .hero {
+      .container {
+        form {
+          flex-direction: column;
+          .dateCheked {
+            width: 100%;
+            margin-bottom: 20px;
+          }
+          .btnSelects {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1025px) {
+    .hero {
+      .container {
+.title{
+  padding: 200px 100px;
+  .heroTitle{
+    font-size: 50px;
+  }
+}
+      }
+    }
+  }
 
 
-@media (max-width: 1200px){
-  .rooms{
-    
-    padding-left: 30px;
-    padding-right: 30px;
-    .container{
-      width: 100%;
-      .row{
+@media (max-width: 768px) {
+  .hero {
+    .container {
+      .title{
+        padding: 200px 50px;
+        .heroTitle{
+          font-size: 45px;
+        }
+      }
+      form {
+        padding-bottom: 25px;
+        .btnSelects {
+          flex-direction: column;
+          .selectBtn {
+            width: 100%;
+          }
+          .heroBtn {
+            width: 100%;
+            margin-top: 20px;
+            text-align: start;
+            a {
+              width: 49%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
-        .sectionTitle{
+@media (max-width: 576px) {
+  .hero {
+    .container {
+      .title{
+        padding: 400px 0 200px;
+        .heroTitle{
+          font-size: 30px;
+        }
+      }
+      form {
+        padding: 200px 0;
+        .btnSelects {
+          .selectBtn {
+            width: 100%;
+            flex-direction: column;
+            .heroSelect {
+              width: 100%;
+            }
+          }
+          .heroBtn {
+            width: 100%;
+            a {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//? ---------------------------- End Hero Section ---------------------------- */
+//* ------------------------- Start Services Section ------------------------- */
+.services {
+  width: 100%;
+  padding: 120px 0;
+  .container {
+    .row {
+      flex-wrap: wrap;
+      .servicesLeft {
+        max-width: 41.6%;
+        flex: 0 0 41.6%;
+        padding: 0 12px;
+        img {
           width: 100%;
-          h2{
+          object-fit: contain;
+          transform: translateY(5%);
+          vertical-align: middle;
+        }
+      }
+      .servicesMiddle {
+        max-width: 33.3%;
+        flex: 0 0 33.3%;
+        padding: 0 12px;
+        transform: translateY(13%);
+        .servicesTitle {
+          font-family: $secondary-font;
+          font-size: 40px;
+          font-weight: 400;
+          line-height: 1.3;
+          margin-bottom: 12px;
+          display: block;
+          color: $black;
+        }
+        .servicesInfo {
+          font-size: 17px;
+          font-weight: 400;
+          line-height: 1.8;
+          color: #656565;
+          margin-bottom: 30px;
+        }
+        a {
+          @include primaryBtn();
+        }
+      }
+      .servicesRight {
+        max-width: 25%;
+        flex: 0 0 25%;
+        padding: 0 12px;
+        img {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .services {
+    .container {
+      .row {
+        .servicesMiddle {
+          .servicesTitle {
+            font-size: 36px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .services {
+    .container {
+      .row {
+        .servicesLeft {
+          max-width: 50%;
+          flex: 0 0 50%;
+        }
+        .servicesMiddle {
+          max-width: 50%;
+          flex: 0 0 50%;
+        }
+        .servicesRight {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .services {
+    padding: 80px 0;
+    .container {
+      .row {
+        .servicesLeft {
+          max-width: 100%;
+          flex: 0 0 100%;
+          padding-bottom: 40px;
+        }
+        .servicesMiddle {
+          max-width: 100%;
+          flex: 0 0 100%;
+          .servicesTitle {
             font-size: 30px;
           }
         }
       }
     }
-      .container{
-        .roomCardsBox{
-          .row{
-            .card{
-              width: 50%;
-              &:nth-child(1){
-                display: none;
+  }
+}
+
+@media (max-width: 426px) {
+  .services {
+    padding: 60px 0;
+    .container {
+      .row {
+        .servicesMiddle {
+          transform: translateY(5%);
+          .servicesTitle {
+            font-size: 26px;
+          }
+          .servicesInfo {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//? -------------------------- End Services Section -------------------------- */
+//* --------------------------- Start Rooms Section -------------------------- */
+.rooms {
+  width: 100%;
+  background: #f9f8f8;
+  padding: 110px 0 0 0;
+  .container {
+    .row {
+      justify-content: space-between;
+      .sectionTitle {
+        width: 100%;
+        padding: 0 12px;
+        margin-bottom: 30px;
+        h2 {
+          font-family: $secondary-font;
+          font-size: 42px;
+          font-weight: 400;
+          line-height: 1.3;
+          margin-bottom: 12px;
+        }
+        .sectionInfo {
+          color: #656565;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 1.5;
+        }
+      }
+      .sectionBtn {
+        display: flex;
+        align-items: center;
+        a {
+          display: inline-block;
+          border: 1px solid #0000002b;
+          border-radius: 50px;
+          transition: 0.3s ease all;
+          margin-right: 13px;
+          i {
+            font-size: 20px;
+            color: rgba(0, 0, 0, 0.699);
+            padding: 15px 27px;
+          }
+          &:hover {
+            border-color: black;
+          }
+        }
+      }
+    }
+    .roomCardsBox {
+      width: 100%;
+      .row {
+        gap: 20px;
+        .card {
+          width: 33%;
+          position: relative;
+          img {
+            max-width: 100%;
+            object-fit: contain;
+          }
+          .cardInfo {
+            position: absolute;
+            top: 60%;
+            left: 4%;
+
+            a {
+              font-family: $secondary-font;
+              color: #fff;
+              font-size: 32px;
+              transition: 0.3s ease all;
+              &:hover {
+                color: $light-orange;
               }
-            
-              .cardInfo{
-                a{
+            }
+            p {
+              margin-bottom: 10px;
+              color: #fff;
+              font-weight: 300;
+            }
+
+            color: #fff;
+            font-weight: 300;
+            span {
+              .price {
+                font-size: 24px;
+                font-weight: 400;
+                color: #fff;
+                margin-left: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .rooms {
+    padding-top: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+    .container {
+      width: 100%;
+      .row {
+        .sectionTitle {
+          width: 100%;
+          h2 {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+    .container {
+      .roomCardsBox {
+        .row {
+          .card {
+            width: 50%;
+            &:nth-child(1) {
+              display: none;
+            }
+
+            .cardInfo {
+              a {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .rooms {
+    .container {
+      .row {
+        .sectionBtn {
+          display: none;
+        }
+      }
+      .roomCardsBox {
+        .row {
+          .card {
+            width: 100%;
+            &:nth-child(2) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .rooms {
+    .container {
+      .row {
+        .sectionTitle {
+          h2 {
+            font-size: 26px;
+          }
+          .sectionInfo {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 376px) {
+  .rooms {
+    .container {
+      .roomCardsBox {
+        .row {
+          .card {
+            .cardInfo {
+              top: 45%;
+              a {
+                font-size: 16px;
+              }
+              p {
+                font-size: 14px;
+              }
+              span {
+                font-size: 14px;
+                .price {
                   font-size: 18px;
                 }
               }
@@ -278,30 +583,9 @@ main {
           }
         }
       }
-      
     }
   }
-  @media (max-width: 768px){
-    .rooms{
-        .container{
-          .roomCardsBox{
-            .row{
-              .card{
-                width: 100%;
-                &:nth-child(2){
-                  display: none;
-                }
-              }
-            }
-          }
-        }
-        
-      }
-    }
-
-
-
-
+}
 
 //? ---------------------------- End Rooms Section --------------------------- */
 //* --------------------------- Start Hotel Section -------------------------- */
@@ -361,7 +645,7 @@ main {
       .hotelInfo {
         width: 50%;
         padding: 60px 31px;
-        background: $black; 
+        background: $black;
         // height: 520px;
         text-align: center;
         .hotelTitle {
@@ -388,68 +672,62 @@ main {
   }
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1200px) {
   .hotel {
-.container{
-  .sectionTitle{
-    text-align: center;
-    // margin: 50px 100px;
-  }
-  .row {
-    padding:  0;
-    .hotelImg {
-      width: 50%;
-    }
-    .hotelInfo {
-      width: 50%;
-      padding: 60px 31px;
-      .hotelsInfo {
-        font-size: 15px;
+    padding: 60px 0;
+    .container {
+      .sectionTitle {
+        text-align: center;
+        // margin: 50px 100px;
       }
-    }
-  }
-}
-}
-  }
-
-
-  @media (max-width: 992px){
-    .hotel {
-  .container{
-    .sectionTitle{
-      // margin: 50px 0px;
-    }
-    .row {
-      .hotelImg {
-        width: 50%;
-      }
-      .hotelInfo {
-        width: 50%;
-        padding: 35px 22px;
-        .hotelTitle{
-          .titleContent{
-            font-size: 28px;
+      .row {
+        padding: 0;
+        .hotelImg {
+          width: 50%;
+        }
+        .hotelInfo {
+          width: 50%;
+          padding: 60px 31px;
+          .hotelsInfo {
+            font-size: 15px;
           }
         }
-        .hotelsInfo {
-          font-size: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .hotel {
+    .container {
+      .row {
+        .hotelImg {
+          width: 50%;
+        }
+        .hotelInfo {
+          width: 50%;
+          padding: 35px 22px;
+          .hotelTitle {
+            .titleContent {
+              font-size: 28px;
+            }
+          }
+          .hotelsInfo {
+            font-size: 15px;
+          }
         }
       }
     }
   }
-  }
-    }
-    @media (max-width: 768px){
-      .hotel {
-    .container{
-      .sectionTitle{
-        // margin: 50px 0px;
-      }
+}
+@media (max-width: 768px) {
+  .hotel {
+    .container {
       .row {
         flex-direction: column;
         .hotelImg {
           width: 100%;
-          img{
+          img {
             vertical-align: middle;
             object-fit: cover;
           }
@@ -457,19 +735,41 @@ main {
         .hotelInfo {
           width: 100%;
           padding: 68px 40px;
-          .hotelTitle{
-            .titleContent{
+          .hotelTitle {
+            .titleContent {
               font-size: 42px;
-          }
-          .hotelsInfo {
-            font-size: 18px;
+            }
+            .hotelsInfo {
+              font-size: 18px;
+            }
           }
         }
       }
     }
-    }
+  }
+}
+
+@media (max-width: 426px) {
+  .hotel {
+    padding: 20px 0;
+    .container {
+      .sectionTitle {
+        h2 {
+          font-size: 24px;
+        }
+      }
+      .row {
+        .hotelInfo {
+          .hotelTitle {
+            .titleContent {
+              font-size: 30px;
+            }
+          }
+        }
       }
     }
+  }
+}
 
 //? ---------------------------- End Hotel Section --------------------------- */
 //* --------------------------- Start Video Section -------------------------- */
@@ -482,7 +782,8 @@ main {
     position: relative;
     .videoImg {
       width: 100%;
-      object-fit: contain;
+      object-fit: cover;
+      vertical-align: middle;
     }
   }
   .iconBorder {
@@ -499,6 +800,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.4s ease-out 0s;
     &:after {
       position: absolute;
       border: 100px solid rgba(25, 21, 20, 0.2);
@@ -521,6 +823,67 @@ main {
       .fa-play {
         color: #fff;
         font-size: 40px;
+      }
+    }
+    &:hover {
+      .fa-play {
+        color: $light-orange;
+        transform: scale(0.9);
+      }
+    }
+  }
+}
+
+@media (max-width: 1025px) {
+  .video {
+    .iconBorder {
+      transform: translateY(-45px);
+      background-color: rgba(25, 21, 20, 0.418);
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .video {
+    .videoContent {
+      .iconBorder {
+        width: 80px;
+        height: 80px;
+
+        .borderInIcon {
+          width: 40px;
+          height: 40px;
+          .fa-play {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .video {
+    .videoContent {
+      padding: 0;
+      .videoImg {
+        height: 300px;
+        object-fit: cover;
+      }
+      .iconBorder {
+        width: 60px;
+        height: 60px;
+        transform: translateY(-30px);
+        .borderInIcon {
+          width: 30px;
+          height: 30px;
+          .fa-play {
+            font-size: 15px;
+          }
+        }
       }
     }
   }
@@ -549,12 +912,12 @@ main {
         flex-wrap: wrap;
 
         .mealCard {
-          width: 33%;
+          max-width: 33%;
           padding: 0 12px;
           .mealImage {
             width: 100%;
             position: relative;
-            transition: all .4s ease-out 0s;
+            transition: all 0.4s ease-out 0s;
             &::before {
               content: "";
               position: absolute;
@@ -576,7 +939,7 @@ main {
               bottom: 10%;
               display: flex;
               justify-content: center;
-              transition: all .4s ease-out 0s;
+              transition: all 0.4s ease-out 0s;
               a {
                 color: #fff;
                 font-size: 27px;
@@ -596,14 +959,14 @@ main {
               padding: 0 15px;
               text-align: center;
               z-index: 1;
-              transition: all .4s ease-out 0s;
+              transition: all 0.4s ease-out 0s;
               .contentName {
                 font-family: $secondary-font;
                 color: #fff;
                 font-size: 27px;
                 font-weight: 400;
-                transition: all .4s ease-out 0s;
-                &:hover{
+                transition: all 0.4s ease-out 0s;
+                &:hover {
                   color: $light-orange;
                 }
               }
@@ -614,12 +977,12 @@ main {
                 font-size: 16px;
               }
             }
-            &:hover{
-              .mealName{
+            &:hover {
+              .mealName {
                 opacity: 0;
                 visibility: hidden;
               }
-              .mealContent{
+              .mealContent {
                 opacity: 1;
                 visibility: visible;
               }
@@ -631,60 +994,149 @@ main {
   }
 }
 
+@media (max-width: 1025px) {
+  .meal {
+    .container {
+      .mealCardBox {
+        .row {
+          .mealCard {
+            .mealImage {
+              .mealName {
+                a {
+                  font-size: 18px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .meal {
+    padding: 80px 0;
+    .container {
+      .mealTitle {
+        font-size: 31px;
+      }
+      .mealCardBox {
+        .row {
+          .mealCard {
+            max-width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .meal {
+    .container {
+      .mealTitle {
+        font-size: 22px;
+      }
+      .mealCardBox {
+        .row {
+          .mealCard {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
 //? ---------------------------- End Meal Section ---------------------------- */
 //* ------------------------- Start Feedback Section ------------------------- */
-.feedback{
+.feedback {
   width: 100%;
-  background: #B86E5A;
+  background: #b86e5a;
   padding: 60px 40px;
-  .feedbackCardBox{
+  .feedbackCardBox {
     width: 100%;
-.row{
-  gap: 80px;
-.feedbackCard{
-width: 50%;
-display: flex;
-.feedIcon{
-  color: #fff;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  i{
-    border: #fff solid 1px;
-    border-radius: 50%;
-    padding: 15px;
+    .row {
+      gap: 80px;
+      .feedbackCard {
+        width: 50%;
+        display: flex;
+        .feedIcon {
+          color: #fff;
+          font-size: 20px;
+          display: flex;
+          align-items: center;
+          i {
+            border: #fff solid 1px;
+            border-radius: 50%;
+            padding: 15px;
+          }
+        }
+        .iconLeft {
+          margin-right: 30px;
+        }
+        .iconRight {
+          margin-left: 30px;
+        }
+        .feedContent {
+          color: #fff;
+          .feedTitle {
+            font-weight: 400;
+            font-size: 30px;
+            margin-bottom: 37px;
+          }
+          .feedInfo {
+            font-weight: 300;
+            font-size: 24px;
+            margin-bottom: 37px;
+          }
+          .feedName {
+            font-weight: 300;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
 
-  }
-}
-.iconLeft{
-  margin-right: 30px;
-}
-.iconRight{
-  margin-left: 30px;
-}
-.feedContent{
-  color: #fff;
-  .feedTitle{
-    font-weight: 400;
-    font-size: 30px;
-    margin-bottom: 37px;
-  }
-  .feedInfo{
-    font-weight: 300;
-    font-size: 24px;
-    margin-bottom: 37px;
-  }
-  .feedName{
-    font-weight: 300;
-    font-size: 20px;
+@media (max-width: 698px) {
+  .feedback {
+    .feedbackCardBox {
+      .row {
+        .feedbackCard {
+          .feedContent {
+            .feedTitle {
+              font-size: 28px;
+            }
+            .feedInfo {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
-}
-}
+@media (max-width: 680px) {
+  .feedback {
+    .feedbackCardBox {
+      .row {
+        .feedCardTwo {
+          display: none;
+        }
+        .feedbackCard {
+          width: 100%;
+          .feedIcon {
+            display: none;
+          }
+        }
+      }
+    }
   }
 }
-  
 
 //? -------------------------- End Feedback Section -------------------------- */
 }
