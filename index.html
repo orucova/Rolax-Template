@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/scss/index.css" />
+    <link rel="icon" href="./assets/image/favicon.png.webp" />
     <title>Hotel | Template</title>
   </head>
-  <body> 
+  <body>
     <!--* ---------------------------- Start Header ----------------------------- -->
     <header>
       <div class="headerTop">
@@ -19,13 +20,21 @@
           </div>
           <ul class="socialList">
             <li class="socialItem">
-              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a target="blank" href="https://www.facebook.com/"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
             </li>
             <li class="socialItem">
-              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a target="blank" href="https://twitter.com/"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
             </li>
             <li class="socialItem">
-              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a
+                target="blank"
+                href="https://www.linkedin.com/?original_referer=https%3A%2F%2Fwww.google.com%2F"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
             </li>
           </ul>
         </div>
@@ -52,7 +61,19 @@
             </ul>
             <a href="#" class="headerBtn">Book Now</a>
           </nav>
-          <i class="fa-solid fa-bars"></i>
+          <div class="top-nav">
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+          </label>
+            <ul class="menu">
+              <li class="navItem"><a class="active" href="./index.html">Home</a></li>
+              <li class="navItem"><a href="./rooms.html">Rooms</a></li>
+              <li class="navItem"><a href="./about.html">About</a></li>
+              <li>Blog</li>
+              <li class="navItem"><a href="./contact.html">Contact Us</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -63,15 +84,43 @@
       <section class="hero">
         <div class="container">
           <div class="title">
-            <h1 class="heroTitle">Rest Journey in Single step, in the breathtaking</h1>
+            <h1 class="heroTitle">
+              Rest Journey in Single step, in the breathtaking
+            </h1>
           </div>
-          <!-- <form>
-            <div class="checkIn">
-              <label for="checkIn">Check In Date*</label>
-              <i class="fa-regular fa-calendar"></i>
-              <input type="date" placeholder="Check in">
+          <form>
+            <div class="dateCheked">
+              <div class="checkIn">
+                <p>Check In Date*</p>
+                <i class="fa-regular fa-calendar"></i>
+                <label for="checkIn">Check In</label>
+                <input type="date" id="checkIn" class="date" />
+              </div>
+              <div class="checkIn">
+                <p>Check In Date*</p>
+                <i class="fa-regular fa-calendar"></i>
+                <label for="checkIn">Check In</label>
+                <input type="date" id="checkIn" class="date" />
+              </div>
             </div>
-          </form> -->
+            <div class="btnSelects">
+              <div class="selectBtn">
+                <select class="heroSelect" name="select">
+                  <option value="adult">Adult</option>
+                  <option value="adult">Adult</option>
+                  <option value="adult">Adult</option>
+                </select>
+                <select class="heroSelect" name="select">
+                  <option value="children">Children</option>
+                  <option value="children">Children</option>
+                  <option value="children">Children</option>
+                </select>
+              </div>
+              <div class="heroBtn">
+                <a class="href" ="./index.html">Search</a>
+              </div>
+            </div>
+          </form>
         </div>
       </section>
       <!--* -------------------------- End Hero Section --------------------------- -->
@@ -167,15 +216,23 @@
             <div class="sectionLink">
               <a href="./index.html">Find a Room For You</a>
             </div>
-            
           </div>
           <div class="row">
             <div class="hotelImg">
               <img src="./assets/image/hotel img.webp" alt="hotel image" />
             </div>
             <div class="hotelInfo">
-              <h3 class="hotelTitle"><a href="./index.html" class="titleContent">Take advantage of our seasonal specials.</a></h3>
-              <p class="hotelsInfo">The concept and service of the best luxury hotels in Asturias in our sophisticated Urban Double and Unique Junior Suite rooms, with the possibility of enjoying a furnished terrace in our Double Urban Loft and Unique Junior Loft Suite.</p>
+              <h3 class="hotelTitle">
+                <a href="./index.html" class="titleContent"
+                  >Take advantage of our seasonal specials.</a
+                >
+              </h3>
+              <p class="hotelsInfo">
+                The concept and service of the best luxury hotels in Asturias in
+                our sophisticated Urban Double and Unique Junior Suite rooms,
+                with the possibility of enjoying a furnished terrace in our
+                Double Urban Loft and Unique Junior Loft Suite.
+              </p>
               <a href="./index.html" class="hotelBtn">view projects</a>
             </div>
           </div>
@@ -184,12 +241,15 @@
       <!--* ------------------------- End Hotels Section -------------------------- -->
       <!--? ------------------------- Start Video Section ------------------------- -->
       <section class="video">
-          <div class="videoContent">
-            <img class="videoImg" src="./assets/image/video-bg.jpg.webp" alt="video">
-            <a class="iconBorder" href="#">
-              <span class="borderInIcon" ><i class="fa-solid fa-play"></i></span>
-            </a>
-          </div>
+        <div class="videoContent">
+          <img
+            class="videoImg"
+            src="./assets/image/video-bg.jpg.webp"
+            alt="video"
+          />
+          <a class="iconBorder" href="#">
+            <span class="borderInIcon"><i class="fa-solid fa-play"></i></span>
+          </a>
         </div>
       </section>
       <!--* -------------------------- End Video Section -------------------------- -->
@@ -201,41 +261,58 @@
             <div class="row">
               <div class="mealCard">
                 <div class="mealImage">
-                <img src="./assets/image/meal card 1.webp" alt="meal image">
-                <h3 class="mealName">
-                  <a href="#">Free Drinks</a>
-                </h3>
-                <div class="mealContent">
-                  <a class="contentName" href="#">Free Breakfast</a>
-                  <p class="contentInfo">The concept and service of the best luxury hotels in Asturias in our sophisticated Urban Double and Unique Junior Suite rooms, with the possibility of enjoying a furnished terrace in our Double Urban Loft and Unique Junior Loft Suite.</p>
-                </div>
-                </div>
-              </div>
-              <div class="mealCard">
-                <div class="mealImage">
-                <img src="./assets/image/meal card 2.webp" alt="meal image">
-                <h3 class="mealName">
-                  <a href="#">Free Breakfast</a>
-                </h3>
-                <div class="mealContent">
-                  <a class="contentName" href="#">Free Breakfast</a>
-                  <p class="contentInfo">The concept and service of the best luxury hotels in Asturias in our sophisticated Urban Double and Unique Junior Suite rooms, with the possibility of enjoying a furnished terrace in our Double Urban Loft and Unique Junior Loft Suite.</p>
-                </div>
+                  <img src="./assets/image/meal card 1.webp" alt="meal image" />
+                  <h3 class="mealName">
+                    <a href="#">Free Drinks</a>
+                  </h3>
+                  <div class="mealContent">
+                    <a class="contentName" href="#">Free Breakfast</a>
+                    <p class="contentInfo">
+                      The concept and service of the best luxury hotels in
+                      Asturias in our sophisticated Urban Double and Unique
+                      Junior Suite rooms, with the possibility of enjoying a
+                      furnished terrace in our Double Urban Loft and Unique
+                      Junior Loft Suite.
+                    </p>
+                  </div>
                 </div>
               </div>
               <div class="mealCard">
                 <div class="mealImage">
-                <img src="./assets/image/meal card 3.webp" alt="meal image">
-                <h3 class="mealName">
-                  <a href="#">Free Dinner</a>
-                </h3>
-                <div class="mealContent">
-                  <a class="contentName" href="#">Free Breakfast</a>
-                  <p class="contentInfo">The concept and service of the best luxury hotels in Asturias in our sophisticated Urban Double and Unique Junior Suite rooms, with the possibility of enjoying a furnished terrace in our Double Urban Loft and Unique Junior Loft Suite.</p>
-                </div>
+                  <img src="./assets/image/meal card 2.webp" alt="meal image" />
+                  <h3 class="mealName">
+                    <a href="#">Free Breakfast</a>
+                  </h3>
+                  <div class="mealContent">
+                    <a class="contentName" href="#">Free Breakfast</a>
+                    <p class="contentInfo">
+                      The concept and service of the best luxury hotels in
+                      Asturias in our sophisticated Urban Double and Unique
+                      Junior Suite rooms, with the possibility of enjoying a
+                      furnished terrace in our Double Urban Loft and Unique
+                      Junior Loft Suite.
+                    </p>
+                  </div>
                 </div>
               </div>
-              
+              <div class="mealCard">
+                <div class="mealImage">
+                  <img src="./assets/image/meal card 3.webp" alt="meal image" />
+                  <h3 class="mealName">
+                    <a href="#">Free Dinner</a>
+                  </h3>
+                  <div class="mealContent">
+                    <a class="contentName" href="#">Free Breakfast</a>
+                    <p class="contentInfo">
+                      The concept and service of the best luxury hotels in
+                      Asturias in our sophisticated Urban Double and Unique
+                      Junior Suite rooms, with the possibility of enjoying a
+                      furnished terrace in our Double Urban Loft and Unique
+                      Junior Loft Suite.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -243,32 +320,37 @@
       <!--* -------------------------- End Meal Section --------------------------- -->
       <!--? ----------------------- Start Feedback Section ------------------------ -->
       <section class="feedback">
-  <div class="feedbackCardBox">
-    <div class="row">
-      <div class="feedbackCard">
-        <a class="feedIcon iconLeft" href="#"><i class="fa-solid fa-arrow-left"></i></a>
-        <div class="feedContent">
-          <h3 class="feedTitle">Nice Accomodation</h3>
-          <p class="feedInfo">"Leather detail shoulder contrastic colour
-            contour stunning silhouette working peplum.
-            Statement buttons cover-up tweaks patch.</p>
-            <span class="feedName">Omeka Lotus</span>
-        </div>
-      </div>
-      <div class="feedbackCard">
-       
-        <div class="feedContent">
-          <h3 class="feedTitle">Delicious Food</h3>
-          <p class="feedInfo">"Leather detail shoulder contrastic colour
-            contour stunning silhouette working peplum.
-            Statement buttons cover-up tweaks patch.</p>
-            <span class="feedName">Omeka Lotus</span>
-        </div>
-        <a class="feedIcon iconRight" href="#"><i class="fa-solid fa-arrow-right"></i></i></a>
-      </div>
-    </div>
-  </div>
-</div>
+        <div class="feedbackCardBox">
+          <div class="row">
+            <div class="feedbackCard">
+              <a class="feedIcon iconLeft" href="#"
+                ><i class="fa-solid fa-arrow-left"></i
+              ></a>
+              <div class="feedContent">
+                <h3 class="feedTitle">Accomodation</h3>
+                <p class="feedInfo">
+                  "Leather detail shoulder contrastic colour contour stunning
+                  silhouette working peplum. Statement buttons cover-up tweaks
+                  patch.
+                </p>
+                <span class="feedName">Omeka Lotus</span>
+              </div>
+            </div>
+            <div class="feedbackCard feedCardTwo">
+              <div class="feedContent">
+                <h3 class="feedTitle">Delicious Food</h3>
+                <p class="feedInfo">
+                  "Leather detail shoulder contrastic colour contour stunning
+                  silhouette working peplum. Statement buttons cover-up tweaks
+                  patch.
+                </p>
+                <span class="feedName">Omeka Lotus</span>
+              </div>
+              <a class="feedIcon iconRight" href="#"
+                ><i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
         </div>
       </section>
       <!--* ------------------------ End Feedback Section ------------------------- -->
@@ -279,48 +361,78 @@
       <div class="container">
         <div class="row">
           <div class="logoSide">
-            <a href="./index.html" class="footerLogo"><img src="./assets/image/footer logo.webp" alt="logo"></a>
-            <p class="logoInfo">Leather detail contrastic colour contour stunning silhouette working peplum. Statement buttons patch.</p>
+            <a href="./index.html" class="footerLogo"
+              ><img src="./assets/image/footer logo.webp" alt="logo"
+            /></a>
+            <p class="logoInfo">
+              Leather detail contrastic colour contour stunning silhouette
+              working peplum. Statement buttons patch.
+            </p>
             <ul class="footerSocialList">
               <li class="footerSocialItem">
-                <a href="#"><i class="fa-brands fa-square-twitter"></i></i></a>
+                <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
               </li>
               <li class="footerSocialItem">
                 <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
               </li>
-        
+
               <li class="footerSocialItem">
                 <a href="#"><i class="fa-brands fa-linkedin"></i></a>
               </li>
-              <li class="footerSocialItem"><a href="#"><i class="fa-brands fa-square-pinterest"></i></a></li>
+              <li class="footerSocialItem">
+                <a href="#"><i class="fa-brands fa-square-pinterest"></i></a>
+              </li>
             </ul>
           </div>
           <div class="navigationSide">
             <h4 class="navTitle">Navigation</h4>
             <nav class="footerNavBar">
-<ul class="footerNavList">
-  <li class="footerNavItem"><a href="./about.html">About</a></li>
-  <li class="footerNavItem"><a href="./rooms.html">Our Rooms</a></li>
-  <li class="footerNavItem"><a href="./rooms.html">Book A Room</a></li>
-  <li class="footerNavItem"><a href="./index.html">Blog</a></li>
-  <li class="footerNavItem"><a href="./index.html">Privacy & Policy</a></li>
-  <li class="footerNavItem"><a href="./contact.html">Contact</a></li>
-</ul>
+              <ul class="footerNavList">
+                <li class="footerNavItem"><a href="./about.html">About</a></li>
+                <li class="footerNavItem">
+                  <a href="./rooms.html">Our Rooms</a>
+                </li>
+                <li class="footerNavItem">
+                  <a href="./rooms.html">Book A Room</a>
+                </li>
+                <li class="footerNavItem"><a href="./index.html">Blog</a></li>
+                <li class="footerNavItem">
+                  <a href="./index.html">Privacy & Policy</a>
+                </li>
+                <li class="footerNavItem">
+                  <a href="./contact.html">Contact</a>
+                </li>
+              </ul>
             </nav>
           </div>
           <div class="contactSide">
             <h4 class="contactTitle">Contact</h4>
             <ul class="contactList">
-              <li class="contactItem"><a href="#">76/A, Green Lane, Dhanmondi, NYC</a></li>
-              <li class="contactItem"><a class="different" href="tel:10(87)7383940">10 (87) 738-3940</a></li>
-              <li class="contactItem"><a href="mailto:contact@carwash.com">contact@carwash.com</a></li>
+              <li class="contactItem">
+                <a target="_blank" href="https://goo.gl/maps/zHeC4bXr7evRjqMD6"
+                  >76/A, Green Lane, Dhanmondi, NYC</a
+                >
+              </li>
+              <li class="contactItem">
+                <a class="different" href="tel:10(87)7383940"
+                  >10 (87) 738-3940</a
+                >
+              </li>
+              <li class="contactItem">
+                <a href="mailto:contact@carwash.com">contact@carwash.com</a>
+              </li>
             </ul>
           </div>
           <div class="formSide">
             <h4 class="formTitle">Newsletter</h4>
             <p class="formText">Subscribe our newsletter to get updates.</p>
             <form>
-              <input type="email" required placeholder="Enter your email" name="email">
+              <input
+                type="email"
+                required
+                placeholder="Enter your email"
+                name="email"
+              />
               <button type="submit">Search</button>
             </form>
           </div>
